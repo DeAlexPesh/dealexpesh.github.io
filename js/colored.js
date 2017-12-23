@@ -6,7 +6,7 @@ $(function() {
   ];
   var i = 0;  
   setInterval(function() {
-    $('#test').stop().animate({ backgroundColor: c[i] }, 4000);
+    $('#colored').stop().animate({ backgroundColor: c[i] }, 4000);
     i = i < 2 ? i + 1 : 0;
   }, 5000);  
 });
