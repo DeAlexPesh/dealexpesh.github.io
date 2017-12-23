@@ -8,6 +8,6 @@ $(document).ready(function() {
   setInterval(function() {
     $('#colored').stop().animate({ backgroundColor: c[i] }, 4000);
     i = i < 2 ? i + 1 : 0;
-    alert(123);
+    alert(i + ', ' +  $('#colored'));
   }, 5000);  
 });
