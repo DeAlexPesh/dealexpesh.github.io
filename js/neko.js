@@ -1,8 +1,10 @@
 $(document).ready(function() {
   
-  $.fn.preloadImage = function() {
+  function preloadImage = function() {
     return new Promise(function(resolve, reject) {
-      this.each(function() { $('<img/>')[0].src = '../img/' + this; });
+      for (var i = 0; i < arguments.length; i++) {
+        new Image().src = '../img/' + arguments[i];
+      }
       resolve("");
     });
   };
@@ -15,8 +17,7 @@ $(document).ready(function() {
     });
   };
   
-  var arrImg = [p00.png p01.png]
-  $(arrImg).preloadImage().then(function() {
+  preloadImage('p00.png', 'p01.png').then(function() {
     setInterval(function() {
       $('#neko-wrapper').animate({ left: 0 }, 2000, function() {
         setTimeout(function() {
