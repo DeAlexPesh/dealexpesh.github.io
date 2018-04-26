@@ -1,34 +1,22 @@
 $(document).ready(function() {
-  
-  function preloadImage() {
-    return new Promise(function(resolve, reject) {
-      for (var i = 0; i < arguments.length; i++) {
-        new Image().src = '../img/' + arguments[i];
-      }
-      resolve("");
-    });
-  };
-
   function switchImg(classImg) {
     return new Promise(function(resolve, reject) {
       var $oldImg = $('#neko-wrapper').find('.neko:first')
-      $('#neko-wrapper').prepend( $('<div class="neko ' + classImg + '"></div>').css({ display: 0 }) );
+      $('#neko-wrapper').prepend( $('<div class="neko ' + classImg + '"></div>').css({ opacity: 0 }) );
       $('#neko-wrapper').find('.neko:first').animate({ display: 1 }, 500, function() { $oldImg.remove(); resolve(""); });
     });
   };
   
-  preloadImage('p00.png', 'p01.png').then(function() {
-    setInterval(function() {
-      $('#neko-wrapper').animate({ left: 0 }, 2000, function() {
-        setTimeout(function() {
-          switchImg('p01').then(function() {
-            $('#neko-wrapper').animate({ left: -301 }, 1000, function() {
-              switchImg('p00');
-            })
+  setInterval(function() {
+    $('#neko-wrapper').animate({ left: 0 }, 2000, function() {
+      setTimeout(function() {
+        switchImg('p01').then(function() {
+          $('#neko-wrapper').animate({ left: -301 }, 1000, function() {
+            switchImg('p00');
           })
-        }, 2000)
-      })
-    }, 6000);//Math.floor(Math.random() * (300000 - 6000)) + 6000);
-  });
+        })
+      }, 2000)
+    })
+  }, 6000);//Math.floor(Math.random() * (300000 - 6000)) + 6000);
   
 });
