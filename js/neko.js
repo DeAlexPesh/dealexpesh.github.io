@@ -2,7 +2,7 @@ $(document).ready(function() {
   
   $.fn.preloadImage = function() {
     return new Promise(function(resolve, reject) {
-      this.each(function() { $('<img/>')[0].src = this; });
+      this.each(function() { $('<img/>')[0].src = '../img/' + this; });
       resolve("");
     });
   };
@@ -15,7 +15,7 @@ $(document).ready(function() {
     });
   };
   
-  var arrImg = [p00.png, p01.png]
+  var arrImg = ['p00.png', 'p01.png']
   $(arrImg).preloadImage().then(function() {
     setInterval(function() {
       $('#neko-wrapper').animate({ left: 0 }, 2000, function() {
