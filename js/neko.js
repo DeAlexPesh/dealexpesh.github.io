@@ -4,7 +4,7 @@ $(document).ready(function() {
       var $oldImg = $('#neko-wrapper').find('.neko:first')
       $('#neko-wrapper').prepend( $('<div class="neko ' + classImg + '"></div>').css({ opacity: 0 }) );
       $('#neko-wrapper').find('.neko:first').animate({ opacity: 1 }, 500, function() { 
-        $oldImg.remove(); 
+        //$oldImg.remove(); 
         resolve(""); 
       });
     });
