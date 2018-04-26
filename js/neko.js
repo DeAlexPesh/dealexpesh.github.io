@@ -3,8 +3,8 @@ $(document).ready(function() {
   function switchImg(classImg) {
     return new Promise(function(resolve, reject) {
       var $oldImg = $('#neko-wrapper').find('.neko:first')
-      $('#neko-wrapper').prepend( $('<div class="neko ' + classImg + '"></div>').css({ opacity: 0 }) );
-      $('#neko-wrapper').find('.neko:first').animate({ opacity: 1 }, 500, function() { 
+      $('#neko-wrapper').prepend( $('<div class="neko ' + classImg + '"></div>').css({ display: 0 }) );
+      $('#neko-wrapper').find('.neko:first').animate({ display: 1 }, 500, function() { 
         $oldImg.remove(); 
         resolve(""); 
       });
