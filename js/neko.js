@@ -16,5 +16,5 @@ $(document).ready(function() {
         })
       }, 2000)
     })
-  }, Math.floor(Math.random() * (300000 - 6000)) + 6000);
+  }, 6000);//Math.floor(Math.random() * (300000 - 6000)) + 6000);
 });
