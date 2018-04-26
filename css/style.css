@@ -42,12 +42,10 @@ body {
 	pointer-events: none;
 }
 #neko-wrapper .neko.p00 {
-	/*background-image: url(../img/p00.png);*/
-	background-image: url(https://yadi.sk/i/85nUFp3N3Up74t);
+	background-image: url(../img/p00.png);
 }
 #neko-wrapper .neko.p01 {
-	/*background-image: url(../img/p01.png);*/
-	background-image: url(https://yadi.sk/i/HaeUlcwK3Up7CW);
+	background-image: url(../img/p01.png);
 }
 #wrapper {
 	position: absolute;
