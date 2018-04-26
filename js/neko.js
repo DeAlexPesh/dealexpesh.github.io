@@ -1,6 +1,6 @@
 $(document).ready(function() {
   
-  function preloadImage = function() {
+  function preloadImage() {
     return new Promise(function(resolve, reject) {
       for (var i = 0; i < arguments.length; i++) {
         new Image().src = '../img/' + arguments[i];
