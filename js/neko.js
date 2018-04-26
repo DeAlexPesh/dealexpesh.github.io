@@ -13,7 +13,8 @@ $(document).ready(function() {
 
   function preImg() {
     return new Promise(function(resolve, reject) {
-      $('#neko-wrapper').children().not('.neko:first').remove();
+      var $slides = $('#neko-wrapper').children();
+      $slides.not('.neko:first').remove();
       resolve();
     });
   };
@@ -29,7 +30,7 @@ $(document).ready(function() {
           })
         }, 2000)
       })
-    }, 6000);//Math.floor(Math.random() * (300000 - 6000)) + 6000);
+    }, Math.floor(Math.random() * (300000 - 6000)) + 6000);
   });
     
 });
