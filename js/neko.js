@@ -15,7 +15,7 @@ $(document).ready(function() {
     return new Promise(function(resolve, reject) {
       $('#neko-wrapper').children().not('.neko:first').remove();
       resolve($slides);
-    }
+    });
   });
     
   preImg().then(function() {
