@@ -16,7 +16,7 @@ $(document).ready(function() {
       $('#neko-wrapper').children().not('.neko:first').remove();
       resolve($slides);
     });
-  });
+  };
     
   preImg().then(function() {
     setInterval(function() {
